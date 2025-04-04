@@ -1,0 +1,249 @@
+.nav-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.brand {
+    position: relative;
+}
+
+.brand-name {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    background: linear-gradient(90deg, #333 0%, #000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+
+.core-text {
+    background: linear-gradient(90deg, rgba(105, 235, 233, 1) 0%, rgba(137, 5, 109, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.brand-dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(90deg, rgba(105, 235, 233, 1) 0%, rgba(137, 5, 109, 1) 100%);
+    border-radius: 50%;
+    bottom: 5px;
+    right: -12px;
+}
+
+.menu-items {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-items li {
+    position: relative;
+}
+
+.menu-items li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.menu-items li a:hover {
+    color: rgba(137, 5, 109, 1);
+}
+
+.menu-items .active {
+    color: rgba(137, 5, 109, 1);
+}
+
+.menu-items li::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(105, 235, 233, 1) 0%, rgba(137, 5, 109, 1) 100%);
+    transition: width 0.3s ease;
+    border-radius: 2px;
+}
+
+.menu-items li:hover::after,
+.menu-items li a.active::after {
+    width: 100%;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.contact-btn {
+    background: black;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.contact-btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-shine {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.contact-btn:hover .btn-shine {
+    left: 100%;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-img {
+    height: 35px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.menu-img.active {
+    transform: rotate(90deg);
+}
+
+.drop-menu {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.drop-menu.active {
+    max-height: 400px;
+    padding: 1rem 0;
+}
+
+.drop-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.drop-brand {
+    text-align: center;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.drop-brand h2 {
+    background: linear-gradient(90deg, rgba(105, 235, 233, 1) 0%, rgba(137, 5, 109, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+.drop-item {
+    display: block;
+    padding: 1rem 2rem;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.drop-item:hover {
+    background: rgba(105, 235, 233, 0.1);
+    color: rgba(137, 5, 109, 1);
+    padding-left: 2.5rem;
+}
+
+.drop-item.login-item {
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    font-size: inherit;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    color: #6366f1;
+    font-weight: 600;
+}
+
+.drop-item.login-item:hover {
+    background: rgba(99, 102, 241, 0.1);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem 2rem;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .contact-btn {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .brand-name {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .drop-menu {
+        display: none;
+    }
+}
+

@@ -1,0 +1,23 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #6366f1;
+    --primary-dark: #a855f7;
+    --text-dark: #1e293b;
+    --text-light: #64748b;
+    --bg-light: #f8fafc;
+    --bg-white: #ffffff;
+    --border-color: #e2e8f0;
+    --success-bg: #f0f9ff;
+    --success-border: #bae6fd;
+    --success-text: #0369a1;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}

@@ -1,0 +1,193 @@
+/* Company Verification Styles */
+.company-ver-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.company-ver-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.company-ver-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.company-ver-header h1 {
+    font-size: 2.5rem;
+    color: #1e293b;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #6366f1, #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.company-ver-header p {
+    color: #64748b;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.company-ver-form {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 3rem;
+    border-radius: 24px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.company-ver-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.company-ver-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.company-ver-group label {
+    color: #1e293b;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.company-ver-group input,
+.company-ver-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #1e293b;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.company-ver-group input:focus,
+.company-ver-group textarea:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.company-ver-group input::placeholder,
+.company-ver-group textarea::placeholder {
+    color: #94a3b8;
+}
+
+.company-ver-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.company-ver-metric-icon {
+    margin-right: 0.5rem;
+    color: #6366f1;
+}
+
+.company-ver-upload-icon {
+    margin-right: 0.5rem;
+    color: #6366f1;
+}
+
+.company-ver-info-icon {
+    color: #6366f1;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.company-ver-declaration {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.company-ver-declaration input[type="checkbox"] {
+    margin-top: 0.25rem;
+}
+
+.company-ver-declaration span {
+    color: #1e293b;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.company-ver-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.company-ver-verify-btn {
+    padding: 0.75rem 1.5rem;
+    background: #f1f5f9;
+    border: none;
+    border-radius: 8px;
+    color: #1e293b;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.company-ver-verify-btn:hover {
+    background: #e2e8f0;
+}
+
+.company-ver-submit-btn {
+    padding: 0.75rem 1.5rem;
+    background: #6366f1;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.company-ver-submit-btn:hover {
+    background: #4f46e5;
+}
+
+.company-ver-submit-btn:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+}
+
+@media (max-width: 1024px) {
+    .company-ver-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .company-ver-container {
+        padding: 1rem;
+    }
+
+    .company-ver-form {
+        padding: 2rem;
+    }
+
+    .company-ver-header h1 {
+        font-size: 2rem;
+    }
+
+    .company-ver-header p {
+        font-size: 1rem;
+    }
+}
